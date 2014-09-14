@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var typeYourNameFIeld: UITextField!
     @IBOutlet weak var typeYorMessageField: UITextField!
     
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var sendMailButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +28,19 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sendMessageButton(sender: UIButton) {
-	// Some test
+        // Something for test
         messageLabel.hidden = false
         messageLabel.text = typeYorMessageField.text
         typeYorMessageField.text = ""
         typeYorMessageField.resignFirstResponder()
         messageLabel.textColor = UIColor(red: 0, green:255  , blue:0  , alpha: 1)
         sendMailButton.setTitle("tralala", forState: UIControlState.Disabled)
+        
+        nameLabel.hidden = false
+        nameLabel.text = typeYourNameFIeld.text
+        nameLabel.textColor = UIColor.blueColor()
+        typeYourNameFIeld.text = ""
+        typeYourNameFIeld.resignFirstResponder()
     }
 
 
