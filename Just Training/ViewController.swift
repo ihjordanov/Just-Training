@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sendMessageButton(sender: UIButton) {
+	// Some test
         messageLabel.hidden = false
         messageLabel.text = typeYorMessageField.text
         typeYorMessageField.text = ""
